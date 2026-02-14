@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">বাকিখাতা</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_dashboard">ড্যাশবোর্ড</string>
+    <string name="nav_customers">গ্রাহক</string>
+    <string name="nav_reports">রিপোর্ট</string>
+    <string name="nav_settings">সেটিংস</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_title">ড্যাশবোর্ড</string>
+    <string name="total_customers">মোট গ্রাহক</string>
+    <string name="total_due">মোট বাকি</string>
+    <string name="todays_credit">আজকের বাকি</string>
+    <string name="customers_count">%d জন গ্রাহক</string>
+    <string name="taka_symbol">৳</string>
+    <string name="amount_format">৳ %.2f</string>
+    
+    <!-- Customer -->
+    <string name="customers_title">গ্রাহক</string>
+    <string name="add_customer">গ্রাহক যোগ করুন</string>
+    <string name="customer_name">গ্রাহকের নাম</string>
+    <string name="phone_number">ফোন নম্বর</string>
+    <string name="address">ঠিকানা</string>
+    <string name="customer_details">গ্রাহকের বিবরণ</string>
+    <string name="search_customers">গ্রাহক খুঁজুন…</string>
+    <string name="no_customers">কোনো গ্রাহক পাওয়া যায়নি</string>
+    <string name="customer_name_required">গ্রাহকের নাম প্রয়োজন</string>
+    <string name="customer_added_success">গ্রাহক সফলভাবে যোগ করা হয়েছে</string>
+    <string name="customer_updated_success">গ্রাহক সফলভাবে আপডেট করা হয়েছে</string>
+    <string name="customer_deleted_success">গ্রাহক সফলভাবে মুছে ফেলা হয়েছে</string>
+    <string name="edit_customer">গ্রাহক সম্পাদনা করুন</string>
+    <string name="delete_customer">গ্রাহক মুছে ফেলুন</string>
+    <string name="delete_customer_confirmation">আপনি কি নিশ্চিত এই গ্রাহক মুছে ফেলতে চান?</string>
+    
+    <!-- Credit Entry -->
+    <string name="add_credit">বাকি যোগ করুন</string>
+    <string name="credit_history">বাকির ইতিহাস</string>
+    <string name="product_name">পণ্যের নাম</string>
+    <string name="quantity">পরিমাণ</string>
+    <string name="price">দাম</string>
+    <string name="total_amount">মোট টাকা</string>
+    <string name="date">তারিখ</string>
+    <string name="notes">নোট</string>
+    <string name="product_name_required">পণ্যের নাম প্রয়োজন</string>
+    <string name="quantity_required">পরিমাণ প্রয়োজন</string>
+    <string name="price_required">দাম প্রয়োজন</string>
+    <string name="credit_added_success">বাকি সফলভাবে যোগ করা হয়েছে</string>
+    <string name="credit_updated_success">বাকি সফলভাবে আপডেট করা হয়েছে</string>
+    <string name="credit_deleted_success">বাকি সফলভাবে মুছে ফেলা হয়েছে</string>
+    <string name="no_credit_entries">কোনো বাকির এন্ট্রি পাওয়া যায়নি</string>
+    <string name="edit_credit">বাকি সম্পাদনা করুন</string>
+    <string name="delete_credit">বাকি মুছে ফেলুন</string>
+    
+    <!-- Payment -->
+    <string name="add_payment">পেমেন্ট যোগ করুন</string>
+    <string name="payment_history">পেমেন্টের ইতিহাস</string>
+    <string name="payment_amount">পেমেন্টের পরিমাণ</string>
+    <string name="amount">পরিমাণ</string>
+    <string name="amount_required">পরিমাণ প্রয়োজন</string>
+    <string name="payment_added_success">পেমেন্ট সফলভাবে যোগ করা হয়েছে</string>
+    <string name="payment_updated_success">পেমেন্ট সফলভাবে আপডেট করা হয়েছে</string>
+    <string name="payment_deleted_success">পেমেন্ট সফলভাবে মুছে ফেলা হয়েছে</string>
+    <string name="no_payments">কোনো পেমেন্ট পাওয়া যায়নি</string>
+    <string name="edit_payment">পেমেন্ট সম্পাদনা করুন</string>
+    <string name="delete_payment">পেমেন্ট মুছে ফেলুন</string>
+    <string name="remaining_balance">বাকি টাকা</string>
+    
+    <!-- Report -->
+    <string name="reports_title">রিপোর্ট</string>
+    <string name="generate_report">রিপোর্ট তৈরি করুন</string>
+    <string name="export_pdf">PDF এক্সপোর্ট করুন</string>
+    <string name="export_excel">Excel এক্সপোর্ট করুন</string>
+    <string name="monthly_report">মাসিক রিপোর্ট</string>
+    <string name="report_generated">রিপোর্ট সফলভাবে তৈরি হয়েছে</string>
+    <string name="report_error">রিপোর্ট তৈরি করতে ত্রুটি</string>
+    <string name="select_month">মাস নির্বাচন করুন</string>
+    <string name="select_year">বছর নির্বাচন করুন</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">সেটিংস</string>
+    <string name="security">নিরাপত্তা</string>
+    <string name="enable_pin">PIN লক সক্রিয় করুন</string>
+    <string name="enable_fingerprint">আঙুলের ছাপ সক্রিয় করুন</string>
+    <string name="change_pin">PIN পরিবর্তন করুন</string>
+    <string name="backup_restore">ব্যাকআপ এবং রিস্টোর</string>
+    <string name="backup_data">ডেটা ব্যাকআপ করুন</string>
+    <string name="restore_data">ডেটা রিস্টোর করুন</string>
+    <string name="backup_success">ব্যাকআপ সফলভাবে সম্পন্ন হয়েছে</string>
+    <string name="restore_success">রিস্টোর সফলভাবে সম্পন্ন হয়েছে</string>
+    <string name="backup_error">ব্যাকআপ তৈরিতে ত্রুটি</string>
+    <string name="restore_error">ডেটা রিস্টোর করতে ত্রুটি</string>
+    <string name="language">ভাষা</string>
+    <string name="theme">থিম</string>
+    <string name="light_mode">হালকা মোড</string>
+    <string name="dark_mode">অন্ধকার মোড</string>
+    <string name="system_default">সিস্টেম ডিফল্ট</string>
+    <string name="about">সম্পর্কে</string>
+    <string name="version">সংস্করণ</string>
+    
+    <!-- Security -->
+    <string name="lock_screen_title">PIN লিখুন</string>
+    <string name="enter_pin">আপনার PIN লিখুন</string>
+    <string name="create_pin">একটি PIN তৈরি করুন</string>
+    <string name="confirm_pin">PIN নিশ্চিত করুন</string>
+    <string name="pin_mismatch">PIN মিলছে না</string>
+    <string name="wrong_pin">ভুল PIN</string>
+    <string name="use_fingerprint">আঙুলের ছাপ ব্যবহার করুন</string>
+    <string name="fingerprint_description">আঙুলের ছাপ সেন্সর স্পর্শ করুন</string>
+    <string name="fingerprint_success">আঙুলের ছাপ সনাক্ত হয়েছে</string>
+    <string name="fingerprint_error">আঙুলের ছাপ সনাক্ত করা যায়নি</string>
+    
+    <!-- Actions -->
+    <string name="save">সংরক্ষণ করুন</string>
+    <string name="cancel">বাতিল করুন</string>
+    <string name="delete">মুছে ফেলুন</string>
+    <string name="edit">সম্পাদনা করুন</string>
+    <string name="ok">ঠিক আছে</string>
+    <string name="yes">হ্যাঁ</string>
+    <string name="no">না</string>
+    <string name="search">খুঁজুন</string>
+    <string name="filter">ফিল্টার করুন</string>
+    <string name="sort">সাজান</string>
+    <string name="share">শেয়ার করুন</string>
+    <string name="send">পাঠান</string>
+    <string name="close">বন্ধ করুন</string>
+    
+    <!-- Status -->
+    <string name="paid">পরিশোধিত</string>
+    <string name="due">বাকি</string>
+    <string name="overdue">মেয়াদ উত্তীর্ণ</string>
+    <string name="partially_paid">আংশিক পরিশোধিত</string>
+    
+    <!-- SMS -->
+    <string name="send_reminder">রিমাইন্ডার পাঠান</string>
+    <string name="sms_template">হ্যালো %s, আপনার বাকি টাকা ৳%.2f। দয়া করে যত দ্রুত সম্ভব পরিশোধ করুন। - %s</string>
+    <string name="sms_sent">রিমাইন্ডার সফলভাবে পাঠানো হয়েছে</string>
+    
+    <!-- Errors -->
+    <string name="error_generic">একটি ত্রুটি ঘটেছে</string>
+    <string name="error_no_data">কোনো ডেটা নেই</string>
+    <string name="error_network">নেটওয়ার্ক ত্রুটি</string>
+    <string name="error_permission">অনুমতি প্রত্যাখ্যাত</string>
+    
+    <!-- Empty States -->
+    <string name="empty_customers">এখনও কোনো গ্রাহক নেই। শুরু করতে আপনার প্রথম গ্রাহক যোগ করুন।</string>
+    <string name="empty_credits">এখনও কোনো বাকির এন্ট্রি নেই।</string>
+    <string name="empty_payments">এখনও কোনো পেমেন্ট নেই।</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_name">বাকি রিমাইন্ডার</string>
+    <string name="notification_channel_description">বাকি পেমেন্ট রিমাইন্ডারের জন্য নোটিফিকেশন</string>
+    <string name="notification_title">পেমেন্ট রিমাইন্ডার</string>
+    <string name="notification_message">আপনার কাছে সংগ্রহ করার জন্য পেন্ডিং পেমেন্ট আছে</string>
+    
+    <!-- Date Format -->
+    <string name="date_format">dd MMM yyyy</string>
+    <string name="datetime_format">dd MMM yyyy, hh:mm a</string>
+    
+    <!-- Confirmation -->
+    <string name="confirm_delete_title">মুছে ফেলা নিশ্চিত করুন</string>
+    <string name="confirm_delete_message">এই কাজটি পূর্বাবস্থায় ফিরানো যাবে না। আপনি কি নিশ্চিত?</string>
+</resources>
