@@ -27,12 +27,6 @@ class ReportFragment : Fragment() {
     private val binding get() = _binding!!
     
     private val viewModel: ReportViewModel by viewModels()
-    
-    @Inject
-    lateinit var pdfExporter: PdfExporter
-    
-    @Inject
-    lateinit var excelExporter: ExcelExporter
 
     override fun onCreateView(
         inflater: LayoutInflater,

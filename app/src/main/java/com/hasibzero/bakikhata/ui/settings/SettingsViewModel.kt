@@ -31,8 +31,7 @@ sealed class SettingsEvent {
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
-    @ApplicationContext private val context: Context,
-    private val backupManager: BackupManager
+    @ApplicationContext private val context: Context
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(SettingsState())
@@ -97,8 +96,12 @@ class SettingsViewModel @Inject constructor(
             _state.value = _state.value.copy(isLoading = true)
             
             try {
-                backupManager.createBackup()
-                _events.emit(SettingsEvent.ShowMessage("Backup completed successfully"))
+                val backupFile = BackupManager.createBackup(context)
+                if (backupFile != null) {
+                    _events.emit(SettingsEvent.ShowMessage("Backup completed successfully"))
+                } else {
+                    _events.emit(SettingsEvent.ShowMessage("Error creating backup"))
+                }
             } catch (e: Exception) {
                 _events.emit(SettingsEvent.ShowMessage("Error creating backup: ${e.message}"))
             } finally {
@@ -107,13 +110,17 @@ class SettingsViewModel @Inject constructor(
         }
     }
 
-    fun restoreData() {
+    fun restoreData(backupFile: java.io.File) {
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true)
             
             try {
-                backupManager.restoreBackup()
-                _events.emit(SettingsEvent.ShowMessage("Restore completed successfully"))
+                val success = BackupManager.restoreBackup(context, backupFile)
+                if (success) {
+                    _events.emit(SettingsEvent.ShowMessage("Restore completed successfully"))
+                } else {
+                    _events.emit(SettingsEvent.ShowMessage("Error restoring data"))
+                }
             } catch (e: Exception) {
                 _events.emit(SettingsEvent.ShowMessage("Error restoring data: ${e.message}"))
             } finally {

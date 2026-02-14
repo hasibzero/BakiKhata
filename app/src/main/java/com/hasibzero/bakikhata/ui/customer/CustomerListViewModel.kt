@@ -7,10 +7,7 @@ import com.hasibzero.bakikhata.data.repository.CreditEntryRepository
 import com.hasibzero.bakikhata.data.repository.CustomerRepository
 import com.hasibzero.bakikhata.data.repository.PaymentRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -55,16 +52,8 @@ class CustomerListViewModel @Inject constructor(
                 
                 customersFlow.collect { customers ->
                     val customersWithBalance = customers.map { customer ->
-                        var totalCredit = 0.0
-                        var totalPayment = 0.0
-                        
-                        creditEntryRepository.getTotalCreditByCustomer(customer.id).collect { credit ->
-                            totalCredit = credit ?: 0.0
-                        }
-                        
-                        paymentRepository.getTotalPaymentByCustomer(customer.id).collect { payment ->
-                            totalPayment = payment ?: 0.0
-                        }
+                        val totalCredit = creditEntryRepository.getTotalCreditByCustomer(customer.id).first() ?: 0.0
+                        val totalPayment = paymentRepository.getTotalPaymentByCustomer(customer.id).first() ?: 0.0
                         
                         CustomerWithBalance(
                             customer = customer,

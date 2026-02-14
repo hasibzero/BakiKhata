@@ -88,11 +88,12 @@ class LockScreenActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-
-    override fun onBackPressed() {
-        // Prevent going back without unlocking
-        // User must unlock or close the app
-        moveTaskToBack(true)
+        
+        // Handle back button press
+        onBackPressedDispatcher.addCallback(this) {
+            // Prevent going back without unlocking
+            // User must unlock or close the app
+            moveTaskToBack(true)
+        }
     }
 }

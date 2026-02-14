@@ -121,7 +121,13 @@ class CustomerDetailFragment : Fragment() {
                             state.dueAmount,
                             getString(R.string.app_name)
                         )
-                        SmsHelper.sendSms(requireContext(), customer.phoneNumber, message)
+                        SmsHelper.sendSmsReminder(
+                            requireContext(),
+                            customer.phoneNumber,
+                            customer.name,
+                            state.dueAmount,
+                            getString(R.string.app_name)
+                        )
                     }
                 }
             }
