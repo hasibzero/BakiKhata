@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.hasibzero.bakikhata.ui.dashboard.DashboardFragment"
+        android:label="@string/dashboard_title" />
+
+    <fragment
+        android:id="@+id/customerListFragment"
+        android:name="com.hasibzero.bakikhata.ui.customer.CustomerListFragment"
+        android:label="@string/customers_title">
+        <action
+            android:id="@+id/action_customerList_to_addCustomer"
+            app:destination="@id/addCustomerFragment" />
+        <action
+            android:id="@+id/action_customerList_to_customerDetail"
+            app:destination="@id/customerDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCustomerFragment"
+        android:name="com.hasibzero.bakikhata.ui.customer.AddCustomerFragment"
+        android:label="@string/add_customer">
+        <argument
+            android:name="customerId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/customerDetailFragment"
+        android:name="com.hasibzero.bakikhata.ui.customer.CustomerDetailFragment"
+        android:label="@string/customer_details">
+        <argument
+            android:name="customerId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_customerDetail_to_addCredit"
+            app:destination="@id/addCreditFragment" />
+        <action
+            android:id="@+id/action_customerDetail_to_addPayment"
+            app:destination="@id/addPaymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCreditFragment"
+        android:name="com.hasibzero.bakikhata.ui.credit.AddCreditFragment"
+        android:label="@string/add_credit">
+        <argument
+            android:name="customerId"
+            app:argType="long" />
+        <argument
+            android:name="creditId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addPaymentFragment"
+        android:name="com.hasibzero.bakikhata.ui.payment.AddPaymentFragment"
+        android:label="@string/add_payment">
+        <argument
+            android:name="customerId"
+            app:argType="long" />
+        <argument
+            android:name="paymentId"
+            android:defaultValue="-1L"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reportFragment"
+        android:name="com.hasibzero.bakikhata.ui.report.ReportFragment"
+        android:label="@string/reports_title" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.hasibzero.bakikhata.ui.settings.SettingsFragment"
+        android:label="@string/settings_title" />
+</navigation>
